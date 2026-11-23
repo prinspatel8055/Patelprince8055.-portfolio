@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Prince Patel • Full Stack Developer (patelprince8055)</title>
+  <meta name="title" content="Prince Patel • Full Stack Developer (patelprince8055)">
+  <meta name="description" content="Official portfolio of Prince Patel (patelprince8055) - Web Developer &amp; IT at Ganpat University. Explore 9+ live portals, full stack projects, Framer animations, Node.js backends, UI/UX designs, and cybersecurity fundamentals.">
+  <meta name="keywords" content="Prince Patel, patelprince8055, prinspatel8055, Web Developer, Full Stack Developer, UI/UX Designer, Ganpat University, Framer, Node.js, Express, Python, JavaScript, Cybersecurity, Portfolio">
+  <meta name="author" content="Prince Patel">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://patelprince8055.vercel.app/">
+  <meta property="og:title" content="Prince Patel • Full Stack Developer (patelprince8055)">
+  <meta property="og:description" content="Explore live university portals, conference platforms, Framer animations, and full-stack web applications by Prince Patel (patelprince8055).">
+  <meta property="og:image" content="assets/profile.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://patelprince8055.vercel.app/">
+  <meta property="twitter:title" content="Prince Patel • Full Stack Developer (patelprince8055)">
+  <meta property="twitter:description" content="Explore live university portals, conference platforms, Framer animations, and full-stack web applications by Prince Patel (patelprince8055).">
+  <meta property="twitter:image" content="assets/profile.jpg">
+
+  <!-- Favicon (Crisp <PP /> Monogram Logo) -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-logo-ring">
+        <span class="preloader-monogram">&lt;PP /&gt;</span>
+      </div>
+      <div class="preloader-text">patelprince8055</div>
+      <div class="preloader-subtext">Initializing Portfolio &amp; Live Systems...</div>
+      <div class="preloader-bar">
+        <div class="preloader-progress" id="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Custom Glow Cursor (Desktop Only) -->
+  <div class="custom-cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-outline" id="cursor-outline" aria-hidden="true"></div>
+
+  <!-- Floating Vertical Social Sidebar (Desktop) -->
+  <aside class="floating-social-sidebar" aria-label="Social Profiles Sidebar">
+    <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="social-side-btn btn-github" aria-label="GitHub Profile">
+      <svg class="social-svg" viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+      </svg>
+      <span class="tooltip">GitHub (@prinspatel8055)</span>
+    </a>
+    <a href="https://www.linkedin.com/in/prince-patel-7209ab322" target="_blank" rel="noopener noreferrer" class="social-side-btn btn-linkedin" aria-label="LinkedIn Profile">
+      <svg class="social-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+      </svg>
+      <span class="tooltip">LinkedIn (Prince Patel)</span>
+    </a>
+    <a href="https://www.instagram.com/patelprince__8055/" target="_blank" rel="noopener noreferrer" class="social-side-btn btn-instagram" aria-label="Instagram Profile">
+      <svg class="social-svg" viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+      <span class="tooltip">Instagram (@patelprince__8055)</span>
+    </a>
+    <a href="https://www.facebook.com/prince.patel.388565/" target="_blank" rel="noopener noreferrer" class="social-side-btn btn-facebook" aria-label="Facebook Profile">
+      <svg class="social-svg" viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+      <span class="tooltip">Facebook (Prince Patel)</span>
+    </a>
+  </aside>
+
+  <!-- Sticky Glass Navbar -->
+  <header class="navbar-wrapper" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Prince Patel Home">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-text">Prince Patel</span>
+        <span class="brand-slash">/&gt;</span>
+        <span class="brand-tag">8055</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Live Work</a></li>
+          <li><a href="#github" class="nav-link">GitHub Live</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Light / Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light and Dark Theme" title="Toggle Theme">
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Download Resume Button -->
+        <a href="assets/resume.pdf" download="Prince_Patel_Resume.pdf" class="btn btn-outline-nav" aria-label="Download Official Resume PDF">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobile-menu-btn" class="hamburger-btn" aria-label="Toggle Mobile Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Live Work</a></li>
+        <li><a href="#github" class="mobile-nav-link">GitHub Live</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="assets/resume.pdf" download="Prince_Patel_Resume.pdf" class="btn btn-primary btn-full">
+          Download Resume (PDF)
+        </a>
+        <div class="mobile-social-row">
+          <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-github" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/prince-patel-7209ab322" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/patelprince__8055/" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/prince.patel.388565/" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <!-- Background Interactive Canvas & Glowing Blobs -->
+      <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+      <div class="ambient-glow glow-bottom-right" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <!-- Hero Left Column: Text & CTAs -->
+        <div class="hero-content reveal-fade">
+          <div class="status-badge">
+            <span class="status-indicator"></span>
+            <span class="status-text">Available for Full-time Roles &amp; High-Impact Projects</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Prince Patel</span>
+          </h1>
+
+          <div class="hero-dynamic-role" aria-live="polite">
+            <span class="role-static">I am a </span>
+            <span class="typed-text" id="typed-text">Full Stack Developer</span>
+            <span class="typing-cursor" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero-description">
+            Web Developer &amp; IT Specialist at <strong>Ganpat University</strong>. Architecting responsive web applications, high-traffic portals, immersive Framer animations, and secure server environments with <strong>HTML5, CSS3, JavaScript, Node.js &amp; Python</strong>.
+          </p>
+
+          <!-- Primary CTA Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary magnetic-btn">
+              <span>View Live Work</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary magnetic-btn">
+              <span>Contact Me</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+            <button id="hero-view-resume-btn" class="btn btn-glass magnetic-btn" aria-label="Open Resume Viewer Modal">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>View Resume</span>
+            </button>
+            <a href="assets/resume.pdf" download="Prince_Patel_Resume.pdf" class="btn btn-outline magnetic-btn" aria-label="Download Official Resume PDF">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV</span>
+            </a>
+          </div>
+
+          <!-- Hero Big Social Icons (56-64px) -->
+          <div class="hero-social-strip">
+            <span class="social-strip-label">Connect with me:</span>
+            <div class="hero-social-icons">
+              <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-github" aria-label="Prince Patel on GitHub" data-tooltip="GitHub (@prinspatel8055)">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/prince-patel-7209ab322" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-linkedin" aria-label="Prince Patel on LinkedIn" data-tooltip="LinkedIn (Prince Patel)">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/patelprince__8055/" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-instagram" aria-label="Prince Patel on Instagram" data-tooltip="Instagram (@patelprince__8055)">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/prince.patel.388565/" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-facebook" aria-label="Prince Patel on Facebook" data-tooltip="Facebook (Prince Patel)">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: 3D Tilting Portrait Frame -->
+        <div class="hero-image-wrapper reveal-fade">
+          <div class="profile-card-3d" id="profile-card-3d">
+            <!-- Animated Multi-Color Gradient Ring -->
+            <div class="gradient-ring" aria-hidden="true"></div>
+            
+            <div class="profile-img-container">
+              <img 
+                src="assets/profile.jpg" 
+                alt="Prince Patel - Web Developer &amp; UI/UX Designer at Ganpat University" 
+                class="profile-img"
+                id="main-profile-img"
+                loading="eager"
+                onerror="this.style.display='none'; document.getElementById('hero-img-fallback').style.display='flex';"
+              >
+              <!-- Gradient Initials Fallback if photo missing -->
+              <div id="hero-img-fallback" class="img-fallback-box" style="display:none;" aria-label="Prince Patel Initials">
+                <span>PP</span>
+              </div>
+            </div>
+
+            <!-- Floating Micro Badges -->
+            <div class="floating-badge badge-top-left" aria-hidden="true">
+              <span class="badge-icon">🏛️</span>
+              <div class="badge-content">
+                <strong>Ganpat University</strong>
+                <small>Web Developer &amp; IT</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-right" aria-hidden="true">
+              <span class="badge-icon">⚡</span>
+              <div class="badge-content">
+                <strong>9+ Live Portals</strong>
+                <small>Active in Production</small>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left" aria-hidden="true">
+              <span class="badge-icon">🛡️</span>
+              <div class="badge-content">
+                <strong>Cybersecurity</strong>
+                <small>Fundamentals &amp; Awardee</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH MARQUEE STRIP -->
+    <section class="marquee-strip-section" aria-label="Technology Stack Ribbon">
+      <div class="marquee-track" id="marquee-track">
+        <div class="marquee-item"><span class="tech-dot"></span>HTML5 / Modern Semantics</div>
+        <div class="marquee-item"><span class="tech-dot"></span>CSS3 / Glassmorphism</div>
+        <div class="marquee-item"><span class="tech-dot"></span>JavaScript (ES6+)</div>
+        <div class="marquee-item"><span class="tech-dot"></span>TypeScript</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Python Backend</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Node.js &amp; Express</div>
+        <div class="marquee-item"><span class="tech-dot"></span>PostgreSQL &amp; SQL</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Framer Animations</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Webuzo &amp; Hostinger</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Cybersecurity Fundamentals</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Kali Linux</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Docker &amp; Hyper-V</div>
+        <div class="marquee-item"><span class="tech-dot"></span>REST APIs &amp; Postman</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Git &amp; GitHub</div>
+        <!-- Duplicated for seamless loop -->
+        <div class="marquee-item"><span class="tech-dot"></span>HTML5 / Modern Semantics</div>
+        <div class="marquee-item"><span class="tech-dot"></span>CSS3 / Glassmorphism</div>
+        <div class="marquee-item"><span class="tech-dot"></span>JavaScript (ES6+)</div>
+        <div class="marquee-item"><span class="tech-dot"></span>TypeScript</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Python Backend</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Node.js &amp; Express</div>
+        <div class="marquee-item"><span class="tech-dot"></span>PostgreSQL &amp; SQL</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Framer Animations</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Webuzo &amp; Hostinger</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Cybersecurity Fundamentals</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Kali Linux</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Docker &amp; Hyper-V</div>
+        <div class="marquee-item"><span class="tech-dot"></span>REST APIs &amp; Postman</div>
+        <div class="marquee-item"><span class="tech-dot"></span>Git &amp; GitHub</div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Profile Overview</span>
+          <h2 class="section-title">About <span class="gradient-text">Prince Patel</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Glass Bio Card with Tilt -->
+          <div class="about-left-card glass-panel tilt-card reveal-slide-left">
+            <div class="about-avatar-wrapper">
+              <img 
+                src="assets/profile.jpg" 
+                alt="Prince Patel" 
+                class="about-avatar-img"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              >
+              <div class="img-fallback-box" style="display:none;">
+                <span>PP</span>
+              </div>
+              <div class="avatar-glow"></div>
+            </div>
+
+            <h3 class="about-name">Prince Patel</h3>
+            <p class="about-handle">@patelprince8055 &bull; Gujarat, India</p>
+
+            <div class="about-badge-row">
+              <span class="badge-chip">Ganpat University</span>
+              <span class="badge-chip">Computer Science</span>
+              <span class="badge-chip">Full Stack</span>
+            </div>
+
+            <!-- Achievement Highlight from Resume -->
+            <div class="achievement-card">
+              <div class="achievement-icon">🏆</div>
+              <div class="achievement-info">
+                <h4>3rd Place Award (2022)</h4>
+                <p>Poster Presentation Competition during Cyber Security related event at Ganpat University.</p>
+              </div>
+            </div>
+
+            <div class="about-contact-micro">
+              <a href="mailto:prinspatel8055@gmail.com" class="about-micro-link">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                prinspatel8055@gmail.com
+              </a>
+              <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="about-micro-link">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                github.com/prinspatel8055
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Bio Content & Animated Metric Counters -->
+          <div class="about-right-content reveal-slide-right">
+            <h3 class="about-headline">
+              Crafting <span class="gradient-text">Pixel-Perfect Web Experiences</span> Backed by Solid Server Architecture
+            </h3>
+
+            <p class="about-p">
+              I am a dedicated <strong>Web Developer &amp; Software Developer</strong> at Ganpat University, holding a Bachelor of Computer Science (CA &amp; IT) earned in 2023. My expertise spans building scalable, user-centric web applications using modern front-end technologies (HTML5, CSS3, JavaScript, Framer) and server-side development with Node.js &amp; Express.
+            </p>
+
+            <p class="about-p">
+              Beyond frontend craftsmanship, I manage production web hosting and Linux servers utilizing <strong>Webuzo and Hostinger control panels</strong>—handling DNS configurations, automated backups, SSL/TLS, and performance troubleshooting for university portals and international conferences. My passion extends into cybersecurity fundamentals, where I study threat awareness, vulnerability assessment concepts, and Linux environments.
+            </p>
+
+            <!-- Animated Counters Grid -->
+            <div class="counter-grid">
+              <div class="counter-card glass-panel">
+                <div class="counter-value" data-target="15">0</div>
+                <div class="counter-suffix">+</div>
+                <div class="counter-label">Projects Delivered</div>
+              </div>
+              <div class="counter-card glass-panel">
+                <div class="counter-value" data-target="9">0</div>
+                <div class="counter-suffix">+</div>
+                <div class="counter-label">Live University &amp; Event Sites</div>
+              </div>
+              <div class="counter-card glass-panel">
+                <div class="counter-value" data-target="25">0</div>
+                <div class="counter-suffix">+</div>
+                <div class="counter-label">Tech &amp; Tools Mastered</div>
+              </div>
+              <div class="counter-card glass-panel">
+                <div class="counter-value" data-target="4">0</div>
+                <div class="counter-suffix">+</div>
+                <div class="counter-label">Years of Coding &amp; Learning</div>
+              </div>
+            </div>
+
+            <!-- About CTAs -->
+            <div class="about-actions">
+              <a href="assets/resume.pdf" download="Prince_Patel_Resume.pdf" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Resume (PDF)</span>
+              </a>
+              <button id="about-view-resume-btn" class="btn btn-secondary" aria-label="Open Resume Preview Modal">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span>View Full CV</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & EXPERIENCE TIMELINE SECTION -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Career Journey</span>
+          <h2 class="section-title">Experience &amp; <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">Verified professional roles, academic milestones, and achievements directly from official resume</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Vertical Spine -->
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <!-- Item 1: Ganpat University (Present) -->
+          <div class="timeline-item reveal-fade">
+            <div class="timeline-dot dot-primary"></div>
+            <div class="timeline-card glass-panel tilt-card">
+              <div class="timeline-header">
+                <div class="timeline-period-badge">July 2025 – Present</div>
+                <span class="timeline-type-pill pill-work">Current Professional Role</span>
+              </div>
+              <h3 class="timeline-role">Web Developer &amp; IT</h3>
+              <h4 class="timeline-company">Ganpat University</h4>
+              <p class="timeline-intro">Leading end-to-end development, visual layout design, and hosting infrastructure for institutional and international conference platforms.</p>
+              <ul class="timeline-duties">
+                <li>Developed responsive websites using <strong>Framer, HTML, CSS, and JavaScript</strong> with interactive animations.</li>
+                <li>Designed and implemented UI/UX layouts for seamless, accessible user experience across all screen sizes.</li>
+                <li>Optimized websites for search engines (SEO), fast loading times, and cross-browser reliability.</li>
+                <li>Created interactive animations and dynamic UI components in Framer and vanilla web stacks.</li>
+                <li>Edited media assets, vector graphics, and video presentations to enhance overall website visuals.</li>
+                <li>Managed and maintained web hosting and servers using <strong>Webuzo and Hostinger control panels</strong>, including domain routing, SSL certificates, automated backups, and incident troubleshooting.</li>
+                <li>Assisted with backend development using <strong>Node.js &amp; Express</strong> to support core website functionality and forms.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag-chip">Framer</span>
+                <span class="tag-chip">JavaScript</span>
+                <span class="tag-chip">Node.js</span>
+                <span class="tag-chip">Express</span>
+                <span class="tag-chip">Webuzo</span>
+                <span class="tag-chip">Hostinger</span>
+                <span class="tag-chip">UI/UX</span>
+                <span class="tag-chip">SEO</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Jhex.Inc -->
+          <div class="timeline-item reveal-fade">
+            <div class="timeline-dot dot-secondary"></div>
+            <div class="timeline-card glass-panel tilt-card">
+              <div class="timeline-header">
+                <div class="timeline-period-badge">Nov 2024 – Jun 2025</div>
+                <span class="timeline-type-pill pill-work">Professional Experience</span>
+              </div>
+              <h3 class="timeline-role">Bench Sales Recruiter</h3>
+              <h4 class="timeline-company">Jhex.Inc</h4>
+              <ul class="timeline-duties">
+                <li>Marketed and placed bench candidates (US IT consultants) with clients and prime tier-1 vendors.</li>
+                <li>Built and maintained strategic communication channels with tier-1 vendors and corporate clients.</li>
+                <li>Negotiated bill rates and contract terms with clients, vendors, and implementers.</li>
+                <li>Posted and maintained consultant profiles on major recruitment platforms (Dice, Monster, etc.).</li>
+                <li>Coordinated technical interview rounds, onboarding paperwork, and legal document verification.</li>
+                <li>Ensured strict compliance with immigration and US legal requirements for consultant placements.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag-chip">Client Relations</span>
+                <span class="tag-chip">Contract Negotiation</span>
+                <span class="tag-chip">Candidate Marketing</span>
+                <span class="tag-chip">Compliance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Ganpat University Bachelor Degree -->
+          <div class="timeline-item reveal-fade">
+            <div class="timeline-dot dot-accent"></div>
+            <div class="timeline-card glass-panel tilt-card">
+              <div class="timeline-header">
+                <div class="timeline-period-badge">Completed in 2023</div>
+                <span class="timeline-type-pill pill-edu">Higher Education</span>
+              </div>
+              <h3 class="timeline-role">Bachelor of Computer Science (CA &amp; IT)</h3>
+              <h4 class="timeline-company">Ganpat University</h4>
+              <p class="timeline-intro">Rigorous foundational and practical computer science curriculum covering programming, software engineering, databases, and networking.</p>
+              <ul class="timeline-duties">
+                <li>Core studies in Web Technologies, Software Engineering, Object-Oriented Programming, and Data Structures.</li>
+                <li>Relational Database Management Systems (SQL &amp; PostgreSQL), Database Design, and Queries.</li>
+                <li>Computer Networking Fundamentals, TCP/IP, OSI model, and Cybersecurity principles.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag-chip">Computer Applications</span>
+                <span class="tag-chip">Software Engineering</span>
+                <span class="tag-chip">Database Design</span>
+                <span class="tag-chip">Networking</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: High School Education -->
+          <div class="timeline-item reveal-fade">
+            <div class="timeline-dot dot-info"></div>
+            <div class="timeline-card glass-panel tilt-card">
+              <div class="timeline-header">
+                <div class="timeline-period-badge">Completed in 2020</div>
+                <span class="timeline-type-pill pill-edu">Secondary Education</span>
+              </div>
+              <h3 class="timeline-role">High School Certificate</h3>
+              <h4 class="timeline-company">Arpan Vidyalaya Highschool &bull; National Institute of Open Schooling</h4>
+              <p class="timeline-intro">Secondary education with focus on science, mathematics, and computing fundamentals.</p>
+              <div class="timeline-tags">
+                <span class="tag-chip">NIOS</span>
+                <span class="tag-chip">Science &amp; Mathematics</span>
+                <span class="tag-chip">Computer Basics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Competition Achievement -->
+          <div class="timeline-item reveal-fade">
+            <div class="timeline-dot dot-award"></div>
+            <div class="timeline-card glass-panel tilt-card highlight-award-card">
+              <div class="timeline-header">
+                <div class="timeline-period-badge badge-gold">2022 Milestone</div>
+                <span class="timeline-type-pill pill-award">Recognition &amp; Award</span>
+              </div>
+              <h3 class="timeline-role">Secured 3rd Place — Poster Presentation Competition</h3>
+              <h4 class="timeline-company">Ganpat University Cybersecurity Event</h4>
+              <p class="timeline-intro">Awarded 3rd place in an official university-wide competition showcasing technical understanding of Cybersecurity fundamentals, threat mitigation, and network awareness.</p>
+              <div class="timeline-tags">
+                <span class="tag-chip">Cybersecurity</span>
+                <span class="tag-chip">Security Awareness</span>
+                <span class="tag-chip">Poster Presentation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION (11 Complete Categories) -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Technical Expertise</span>
+          <h2 class="section-title">Complete Skills &amp; <span class="gradient-text">Proficiencies</span></h2>
+          <p class="section-subtitle">Categorized competencies spanning full stack engineering, UI/UX design, cybersecurity fundamentals, and systems</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="skills-filter-nav reveal-fade" role="tablist" aria-label="Skills Category Filter">
+          <button class="filter-tab-btn active" data-filter="all" role="tab" aria-selected="true">All (11 Categories)</button>
+          <button class="filter-tab-btn" data-filter="programming" role="tab" aria-selected="false">Programming</button>
+          <button class="filter-tab-btn" data-filter="frontend" role="tab" aria-selected="false">Frontend</button>
+          <button class="filter-tab-btn" data-filter="backend" role="tab" aria-selected="false">Backend</button>
+          <button class="filter-tab-btn" data-filter="database" role="tab" aria-selected="false">Database</button>
+          <button class="filter-tab-btn" data-filter="uiux" role="tab" aria-selected="false">UI/UX &amp; Design</button>
+          <button class="filter-tab-btn" data-filter="cybersecurity" role="tab" aria-selected="false">Cybersecurity</button>
+          <button class="filter-tab-btn" data-filter="networking" role="tab" aria-selected="false">Networking</button>
+          <button class="filter-tab-btn" data-filter="tools" role="tab" aria-selected="false">Tools</button>
+          <button class="filter-tab-btn" data-filter="webcms" role="tab" aria-selected="false">Web &amp; CMS</button>
+          <button class="filter-tab-btn" data-filter="creative" role="tab" aria-selected="false">Creative &amp; AI</button>
+          <button class="filter-tab-btn" data-filter="professional" role="tab" aria-selected="false">Professional</button>
+        </div>
+
+        <!-- Skills Cards Grid -->
+        <div class="skills-grid" id="skills-grid">
+          
+          <!-- 1. Programming & Coding Languages -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="programming">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-code">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">01</span>
+                <h3>Programming &amp; Languages</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">JavaScript (ES6+)</span>
+              <span class="skill-chip">TypeScript</span>
+              <span class="skill-chip">HTML5</span>
+              <span class="skill-chip">CSS3</span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">PHP (Basic)</span>
+              <span class="skill-chip">Node.js Runtime</span>
+            </div>
+          </div>
+
+          <!-- 2. Frontend Web Development -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="frontend">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-layout">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">02</span>
+                <h3>Frontend Development</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">Responsive Web Design</span>
+              <span class="skill-chip">Bootstrap</span>
+              <span class="skill-chip">Tailwind CSS</span>
+              <span class="skill-chip">React.js (Exploration)</span>
+              <span class="skill-chip">UI Components Development</span>
+              <span class="skill-chip">Landing Page Development</span>
+              <span class="skill-chip">Website Animations</span>
+              <span class="skill-chip">Interactive Web Interfaces</span>
+              <span class="skill-chip">Cross-Browser Compatibility</span>
+              <span class="skill-chip">Website Optimization</span>
+            </div>
+          </div>
+
+          <!-- 3. Backend Development -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="backend">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-server">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">03</span>
+                <h3>Backend Development</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">Python Backend Development</span>
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">Express.js</span>
+              <span class="skill-chip">REST API Development</span>
+              <span class="skill-chip">CRUD Operations</span>
+              <span class="skill-chip">Backend Integration</span>
+              <span class="skill-chip">Server-Side Programming</span>
+              <span class="skill-chip">File Upload Management</span>
+              <span class="skill-chip">Authentication Concepts</span>
+              <span class="skill-chip">JSON Data Handling</span>
+              <span class="skill-chip">Database Connectivity</span>
+            </div>
+          </div>
+
+          <!-- 4. Database Management -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="database">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-database">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">04</span>
+                <h3>Database Management</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">PostgreSQL</span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">Database Design</span>
+              <span class="skill-chip">Database Queries</span>
+              <span class="skill-chip">CRUD Operations</span>
+              <span class="skill-chip">Data Insertion &amp; Retrieval</span>
+              <span class="skill-chip">Table Relationships</span>
+              <span class="skill-chip">Unique Constraints</span>
+              <span class="skill-chip">JSON Data Storage</span>
+            </div>
+          </div>
+
+          <!-- 5. UI/UX & Web Designing -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="uiux">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-pen">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">05</span>
+                <h3>UI/UX &amp; Web Design</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">UI Design</span>
+              <span class="skill-chip">UX Design Fundamentals</span>
+              <span class="skill-chip">Website Layout Design</span>
+              <span class="skill-chip">Modern Dashboard Design</span>
+              <span class="skill-chip">Landing Page Design</span>
+              <span class="skill-chip">Creative Login Pages</span>
+              <span class="skill-chip">3D UI Concepts</span>
+              <span class="skill-chip">Holographic UI Concepts</span>
+              <span class="skill-chip">Animation-Based UI</span>
+              <span class="skill-chip">Typography &amp; Color Theory</span>
+              <span class="skill-chip">Website Redesign</span>
+              <span class="skill-chip">Canva Designing</span>
+              <span class="skill-chip">Banner &amp; Poster Design</span>
+              <span class="skill-chip">Logo &amp; Icon Design</span>
+            </div>
+          </div>
+
+          <!-- 6. Cybersecurity (Fundamentals) -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="cybersecurity">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-shield">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">06</span>
+                <h3>Cybersecurity (Fundamentals)</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">Cybersecurity Fundamentals</span>
+              <span class="skill-chip">Ethical Hacking Fundamentals</span>
+              <span class="skill-chip">Kali Linux</span>
+              <span class="skill-chip">Linux Fundamentals</span>
+              <span class="skill-chip">Network Security Concepts</span>
+              <span class="skill-chip">Vulnerability Assessment Concepts</span>
+              <span class="skill-chip">Penetration Testing Fundamentals</span>
+              <span class="skill-chip">Security Awareness</span>
+              <span class="skill-chip">Authentication &amp; Authorization</span>
+              <span class="skill-chip">AAA Security Concepts</span>
+              <span class="skill-chip">Cyber Threat Awareness</span>
+              <span class="skill-chip">Basic Security Testing</span>
+            </div>
+          </div>
+
+          <!-- 7. Networking & Infrastructure -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="networking">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-globe">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">07</span>
+                <h3>Networking &amp; Infrastructure</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">OSI Model</span>
+              <span class="skill-chip">TCP/IP Model</span>
+              <span class="skill-chip">IPv4 &amp; Subnetting</span>
+              <span class="skill-chip">LAN / WAN</span>
+              <span class="skill-chip">DNS &amp; DHCP</span>
+              <span class="skill-chip">Routing &amp; Switching</span>
+              <span class="skill-chip">Cisco Fundamentals</span>
+              <span class="skill-chip">VLAN Concepts</span>
+              <span class="skill-chip">Cisco Switches</span>
+              <span class="skill-chip">Wireless Networking</span>
+              <span class="skill-chip">Wi-Fi 6 / 6E Concepts</span>
+              <span class="skill-chip">10G Uplink Concepts</span>
+            </div>
+          </div>
+
+          <!-- 8. Tools & Technologies -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="tools">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-tool">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">08</span>
+                <h3>Tools &amp; Technologies</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">VS Code</span>
+              <span class="skill-chip">Git</span>
+              <span class="skill-chip">GitHub</span>
+              <span class="skill-chip">Docker Desktop (Exploration)</span>
+              <span class="skill-chip">Hyper-V</span>
+              <span class="skill-chip">Windows 11</span>
+              <span class="skill-chip">npm</span>
+              <span class="skill-chip">Postman</span>
+              <span class="skill-chip">CKEditor 4</span>
+              <span class="skill-chip">Canva Pro</span>
+            </div>
+          </div>
+
+          <!-- 9. Web Development & CMS -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="webcms">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-layers">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">09</span>
+                <h3>Web Development &amp; CMS</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">Website Development</span>
+              <span class="skill-chip">Website Maintenance</span>
+              <span class="skill-chip">Content Management</span>
+              <span class="skill-chip">WordPress Fundamentals</span>
+              <span class="skill-chip">Dynamic Web Pages</span>
+              <span class="skill-chip">Website Deployment</span>
+              <span class="skill-chip">Hosting (Webuzo / Hostinger)</span>
+              <span class="skill-chip">Domain &amp; DNS Management</span>
+              <span class="skill-chip">Technical Troubleshooting</span>
+              <span class="skill-chip">Performance Optimization</span>
+              <span class="skill-chip">Image Compression</span>
+            </div>
+          </div>
+
+          <!-- 10. Creative & Advanced Development -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="creative">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-sparkle">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">10</span>
+                <h3>Creative &amp; Advanced Dev</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">AI Integration in Websites</span>
+              <span class="skill-chip">AI-Based Web App Concepts</span>
+              <span class="skill-chip">3D Website Design Concepts</span>
+              <span class="skill-chip">GLB 3D Model Integration</span>
+              <span class="skill-chip">Character Animation</span>
+              <span class="skill-chip">Interactive Avatars</span>
+              <span class="skill-chip">Image Processing with Python</span>
+              <span class="skill-chip">Web Scraping Concepts</span>
+              <span class="skill-chip">Digital Marketing Landing Pages</span>
+            </div>
+          </div>
+
+          <!-- 11. Professional & Practical Skills -->
+          <div class="skill-category-card glass-panel tilt-card" data-category="professional">
+            <div class="skill-card-header">
+              <div class="skill-card-icon icon-briefcase">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <div class="skill-card-title-group">
+                <span class="skill-cat-number">11</span>
+                <h3>Professional &amp; Practical</h3>
+              </div>
+            </div>
+            <div class="skill-chips-container">
+              <span class="skill-chip">Full Stack Web Development</span>
+              <span class="skill-chip">Website Project Management</span>
+              <span class="skill-chip">Website Analysis &amp; Testing</span>
+              <span class="skill-chip">Frontend &amp; Backend Coordination</span>
+              <span class="skill-chip">Team Collaboration</span>
+              <span class="skill-chip">Problem Solving</span>
+              <span class="skill-chip">Continuous Research &amp; Learning</span>
+              <span class="skill-chip">Technical Documentation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE WORK & PROJECTS SECTION (Most Important Section) -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Production Portals</span>
+          <h2 class="section-title">Live Work &amp; <span class="gradient-text">Featured Websites</span></h2>
+          <p class="section-subtitle">Real-world production portals, academic platforms, and event websites developed, optimized, and maintained by Prince Patel</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Project Category Filter Buttons -->
+        <div class="project-filter-nav reveal-fade" role="tablist" aria-label="Projects Filter">
+          <button class="proj-filter-btn active" data-filter="all" role="tab" aria-selected="true">All Live Sites (9)</button>
+          <button class="proj-filter-btn" data-filter="University" role="tab" aria-selected="false">University Portals</button>
+          <button class="proj-filter-btn" data-filter="Events" role="tab" aria-selected="false">Conferences &amp; Events</button>
+          <button class="proj-filter-btn" data-filter="Education" role="tab" aria-selected="false">Education &amp; Academic</button>
+        </div>
+
+        <!-- Dynamic Projects Grid (Rendered from CONFIG.projects in script.js) -->
+        <div class="projects-grid" id="projects-grid" aria-live="polite">
+          <!-- Populated by JavaScript with 3D tilt, zoom, and glow -->
+        </div>
+
+        <!-- Antigravity & AI Lab Projects Subsection -->
+        <div class="antigravity-subsection reveal-fade">
+          <div class="antigravity-header">
+            <div class="antigravity-badge">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>Antigravity &amp; Advanced Projects</span>
+            </div>
+            <h3 class="antigravity-title">Software Engineering, Tools &amp; Autonomous Workflows</h3>
+            <p class="antigravity-desc">Specialized software tools, IoT device managers, OSINT frameworks, and high-performance automation developed using Python, TypeScript, and modern APIs.</p>
+          </div>
+
+          <div class="antigravity-grid" id="antigravity-grid">
+            <!-- Populated by JavaScript from CONFIG.antigravityProjects -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB LIVE SECTION -->
+    <section id="github" class="section github-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Codebase &amp; Contributions</span>
+          <h2 class="section-title">GitHub <span class="gradient-text">Live Activity</span></h2>
+          <p class="section-subtitle">Real-time repository statistics, contribution heatmap, and open-source software by Prince Patel (@prinspatel8055)</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- GitHub Profile & Overview Card -->
+        <div class="github-profile-card glass-panel tilt-card reveal-fade">
+          <div class="gh-profile-main">
+            <div class="gh-avatar-container">
+              <img 
+                src="https://github.com/prinspatel8055.png" 
+                alt="Prince Patel GitHub Avatar" 
+                class="gh-avatar-img"
+                loading="lazy"
+                onerror="this.src='assets/profile.jpg';"
+              >
+              <div class="gh-status-dot" title="Active Developer"></div>
+            </div>
+
+            <div class="gh-user-details">
+              <div class="gh-user-title-row">
+                <h3 class="gh-name" id="gh-user-name">Prince Patel</h3>
+                <span class="gh-username">@prinspatel8055</span>
+              </div>
+              <p class="gh-bio" id="gh-user-bio">
+                Web Developer &amp; IT at Ganpat University | Building full-stack web solutions, responsive UI/UX, and exploring cybersecurity tools.
+              </p>
+              
+              <div class="gh-meta-badges">
+                <span class="gh-badge" id="gh-public-repos">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                  <strong class="gh-stat-val">6+</strong> Public Repos
+                </span>
+                <span class="gh-badge" id="gh-followers">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <strong class="gh-stat-val" id="gh-followers-count">--</strong> Followers
+                </span>
+                <span class="gh-badge" id="gh-following">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                  <strong class="gh-stat-val" id="gh-following-count">--</strong> Following
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gh-profile-cta">
+            <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Open Full GitHub Profile</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contribution Chart Card -->
+        <div class="github-chart-card glass-panel reveal-fade">
+          <div class="gh-chart-header">
+            <div class="gh-chart-title">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span>Yearly Contribution Heatmap</span>
+            </div>
+            <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="gh-chart-link">github.com/prinspatel8055 &rarr;</a>
+          </div>
+          <div class="gh-chart-scrollable">
+            <img 
+              src="https://ghchart.rshah.org/7c5cff/prinspatel8055" 
+              alt="Prince Patel GitHub Contribution Activity Chart" 
+              class="gh-chart-img"
+              loading="lazy"
+            >
+          </div>
+          <p class="gh-chart-footer-note">&larr; Scroll horizontally on mobile to view full 365-day commit history &rarr;</p>
+        </div>
+
+        <!-- Readme Stats & Languages Cards Row -->
+        <div class="github-stats-row reveal-fade">
+          <div class="gh-stats-card glass-panel tilt-card">
+            <img 
+              src="https://github-readme-stats.vercel.app/api?username=prinspatel8055&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" 
+              alt="Prince Patel GitHub Stats" 
+              class="gh-stats-img"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            >
+            <div class="gh-stats-fallback" style="display:none;">
+              <h4>GitHub Statistics</h4>
+              <p>Active repositories, commits, and pull requests on GitHub.</p>
+            </div>
+          </div>
+
+          <div class="gh-stats-card glass-panel tilt-card">
+            <img 
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=prinspatel8055&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000" 
+              alt="Prince Patel Top Languages" 
+              class="gh-stats-img"
+              loading="lazy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            >
+            <div class="gh-stats-fallback" style="display:none;">
+              <h4>Top Languages</h4>
+              <p>Python, TypeScript, JavaScript, HTML5, Go &amp; Shell.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Repositories Grid -->
+        <div class="gh-repos-section reveal-fade">
+          <div class="gh-repos-header">
+            <h3>Recent Public Repositories</h3>
+            <div style="display:inline-flex;align-items:center;gap:0.5rem;">
+              <span class="status-indicator" style="width:7px;height:7px;"></span>
+              <span class="gh-repos-note">Live Sync via GitHub REST API</span>
+            </div>
+          </div>
+
+          <div class="gh-repos-grid" id="gh-repos-grid" aria-live="polite">
+            <!-- Skeleton loaders while fetching -->
+            <div class="repo-skeleton-card glass-panel">
+              <div class="skeleton-line line-title"></div>
+              <div class="skeleton-line line-desc"></div>
+              <div class="skeleton-line line-meta"></div>
+            </div>
+            <div class="repo-skeleton-card glass-panel">
+              <div class="skeleton-line line-title"></div>
+              <div class="skeleton-line line-desc"></div>
+              <div class="skeleton-line line-meta"></div>
+            </div>
+            <div class="repo-skeleton-card glass-panel">
+              <div class="skeleton-line line-title"></div>
+              <div class="skeleton-line line-desc"></div>
+              <div class="skeleton-line line-meta"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">What I Offer</span>
+          <h2 class="section-title">Services &amp; <span class="gradient-text">Specializations</span></h2>
+          <p class="section-subtitle">Delivering enterprise-grade digital solutions from initial UI/UX conception to server deployment</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Landing Pages -->
+          <div class="service-card glass-panel tilt-card reveal-fade">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <h3 class="service-title">Landing Page Development</h3>
+            <p class="service-desc">High-converting, hyper-responsive landing pages built with clean semantic code, tailored animations, and seamless cross-device compatibility to maximize engagement.</p>
+            <ul class="service-features">
+              <li>Modern Framer / HTML5 / CSS3 layouts</li>
+              <li>Lightweight 60fps micro-interactions</li>
+              <li>Mobile-first &amp; Retina ready</li>
+            </ul>
+          </div>
+
+          <!-- Service 2: Website Development -->
+          <div class="service-card glass-panel tilt-card reveal-fade">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="service-title">Full Stack Web Development</h3>
+            <p class="service-desc">Complete end-to-end web applications combining intuitive frontends with powerful Node.js or Python backend logic, secure authentication, and relational databases.</p>
+            <ul class="service-features">
+              <li>Custom architecture &amp; dynamic pages</li>
+              <li>PostgreSQL / SQL database schema design</li>
+              <li>Clean, scalable, maintainable codebase</li>
+            </ul>
+          </div>
+
+          <!-- Service 3: UI/UX Design -->
+          <div class="service-card glass-panel tilt-card reveal-fade">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+            </div>
+            <h3 class="service-title">UI/UX &amp; Interactive Design</h3>
+            <p class="service-desc">Creative interface design, futuristic dark-theme layouts, glassmorphism dashboards, and 3D UI concepts crafted to captivate audiences and ensure intuitive navigation.</p>
+            <ul class="service-features">
+              <li>User journey mapping &amp; wireframing</li>
+              <li>Typography &amp; vibrant color balance</li>
+              <li>Logo, icon &amp; graphic banner assets</li>
+            </ul>
+          </div>
+
+          <!-- Service 4: Backend / REST APIs -->
+          <div class="service-card glass-panel tilt-card reveal-fade">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </div>
+            <h3 class="service-title">Backend &amp; RESTful APIs</h3>
+            <p class="service-desc">Robust server-side REST APIs built with Node.js, Express, or Python. Engineered for smooth CRUD operations, secure data serialization, and file upload pipelines.</p>
+            <ul class="service-features">
+              <li>JSON API endpoints &amp; integration</li>
+              <li>Role-based access &amp; auth workflows</li>
+              <li>Thorough Postman testing &amp; validation</li>
+            </ul>
+          </div>
+
+          <!-- Service 5: Website Maintenance & Hosting -->
+          <div class="service-card glass-panel tilt-card reveal-fade">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="service-title">Hosting, Server &amp; DNS Care</h3>
+            <p class="service-desc">Hands-on Linux server and hosting management via Webuzo and Hostinger. Flawless domain records, SSL configuration, automated database backups, and emergency uptime triage.</p>
+            <ul class="service-features">
+              <li>Webuzo &amp; Hostinger server administration</li>
+              <li>DNS record routing &amp; SSL hardening</li>
+              <li>Regular patch updates &amp; disaster recovery</li>
+            </ul>
+          </div>
+
+          <!-- Service 6: Performance & Digital Marketing -->
+          <div class="service-card glass-panel tilt-card reveal-fade">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3 class="service-title">Performance &amp; Optimization</h3>
+            <p class="service-desc">Fine-tuning websites for 90+ Google Lighthouse scores. Asset compression, lazy-loading, code splitting, and technical on-page SEO to improve search visibility.</p>
+            <ul class="service-features">
+              <li>Image compression &amp; WebP modernization</li>
+              <li>Core Web Vitals acceleration</li>
+              <li>Digital marketing campaign optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header text-center reveal-fade">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Have a project in mind, an opportunity to discuss, or want to collaborate? Send a message directly.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details & Extra Large Socials (72px) -->
+          <div class="contact-info-panel glass-panel tilt-card reveal-slide-left">
+            <h3 class="contact-panel-title">Let's Talk About Your Next Big Project</h3>
+            <p class="contact-panel-desc">
+              Whether you need a high-converting university portal, an interactive web application, or reliable hosting management, I'm ready to bring your vision to life.
+            </p>
+
+            <div class="contact-methods-list">
+              <!-- Email Item -->
+              <div class="contact-method-item">
+                <div class="method-icon-box">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Direct Email</span>
+                  <a href="mailto:prinspatel8055@gmail.com" class="method-link">prinspatel8055@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- Location Item -->
+              <div class="contact-method-item">
+                <div class="method-icon-box">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Current Location</span>
+                  <span class="method-value">Ganpat University, Gujarat, India</span>
+                </div>
+              </div>
+
+              <!-- Availability Status -->
+              <div class="contact-method-item">
+                <div class="method-icon-box">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Availability</span>
+                  <span class="method-value text-accent-green">Open to Full-Time &amp; High-Priority Projects</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Extra Large Social Media Channels (72px with Labels) -->
+            <div class="contact-socials-group">
+              <h4 class="socials-group-title">Official Social Profiles</h4>
+              <div class="contact-social-buttons">
+                <!-- GitHub 72px -->
+                <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-github" aria-label="Visit GitHub Profile">
+                  <div class="xl-icon-circle">
+                    <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                  </div>
+                  <div class="xl-btn-text">
+                    <span class="xl-name">GitHub</span>
+                    <span class="xl-handle">@prinspatel8055</span>
+                  </div>
+                </a>
+
+                <!-- LinkedIn 72px -->
+                <a href="https://www.linkedin.com/in/prince-patel-7209ab322" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-linkedin" aria-label="Visit LinkedIn Profile">
+                  <div class="xl-icon-circle">
+                    <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </div>
+                  <div class="xl-btn-text">
+                    <span class="xl-name">LinkedIn</span>
+                    <span class="xl-handle">@prince-patel-7209ab322</span>
+                  </div>
+                </a>
+
+                <!-- Instagram 72px -->
+                <a href="https://www.instagram.com/patelprince__8055/" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-instagram" aria-label="Visit Instagram Profile">
+                  <div class="xl-icon-circle">
+                    <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </div>
+                  <div class="xl-btn-text">
+                    <span class="xl-name">Instagram</span>
+                    <span class="xl-handle">@patelprince__8055</span>
+                  </div>
+                </a>
+
+                <!-- Facebook 72px -->
+                <a href="https://www.facebook.com/prince.patel.388565/" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-facebook" aria-label="Visit Facebook Profile">
+                  <div class="xl-icon-circle">
+                    <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </div>
+                  <div class="xl-btn-text">
+                    <span class="xl-name">Facebook</span>
+                    <span class="xl-handle">Prince Patel</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-panel glass-panel tilt-card reveal-slide-right">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-subtitle">Fill out the form below. I will respond within 24 hours.</p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name <span class="required-star">*</span></label>
+                  <input 
+                    type="text" 
+                    id="contact-name" 
+                    name="name" 
+                    class="form-control" 
+                    placeholder="e.g. John Doe" 
+                    required 
+                    autocomplete="name"
+                  >
+                  <span class="field-error" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Your Email <span class="required-star">*</span></label>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    name="email" 
+                    class="form-control" 
+                    placeholder="e.g. john@example.com" 
+                    required 
+                    autocomplete="email"
+                  >
+                  <span class="field-error" id="email-error"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject <span class="required-star">*</span></label>
+                <input 
+                  type="text" 
+                  id="contact-subject" 
+                  name="subject" 
+                  class="form-control" 
+                  placeholder="e.g. University Portal Project Inquiry" 
+                  required
+                >
+                <span class="field-error" id="subject-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Project Message <span class="required-star">*</span></label>
+                <textarea 
+                  id="contact-message" 
+                  name="message" 
+                  class="form-control" 
+                  rows="5" 
+                  placeholder="Describe your requirements, goals, timeline, or inquiries..." 
+                  required
+                ></textarea>
+                <span class="field-error" id="message-error"></span>
+              </div>
+
+              <!-- Form Alert Messages -->
+              <div id="form-alert" class="form-alert" role="alert" style="display: none;"></div>
+
+              <button type="submit" id="contact-submit-btn" class="btn btn-primary btn-full magnetic-btn">
+                <span class="btn-text">Send Message</span>
+                <svg class="btn-spinner" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                  <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+                  <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+                </svg>
+                <svg class="btn-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RESUME PREVIEW MODAL -->
+  <div id="resume-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-dialog glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <h3 id="resume-modal-title">Prince Patel — Official Resume</h3>
+        </div>
+        <div class="modal-actions">
+          <a href="assets/resume.pdf" download="Prince_Patel_Resume.pdf" class="btn btn-sm btn-primary" title="Download PDF File">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download</span>
+          </a>
+          <button id="close-modal-btn" class="modal-close-btn" aria-label="Close Resume Modal" title="Close (Esc)">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <iframe id="pdf-viewer-iframe" data-src="assets/resume.pdf" class="pdf-viewer-frame" title="Prince Patel Resume PDF"></iframe>
+      </div>
+
+      <div class="modal-footer">
+        <span class="modal-footer-tip">Tip: Press <kbd>ESC</kbd> or click outside to close</span>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="modal-open-newtab">Open in New Tab &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="#hero" class="footer-brand">
+            <span class="brand-bracket">&lt;</span>
+            <span class="brand-text">Prince Patel</span>
+            <span class="brand-slash">/&gt;</span>
+          </a>
+          <p class="footer-bio">
+            Full Stack Web Developer &amp; UI/UX Designer at Ganpat University. Engineering responsive websites, high-availability portals, and digital excellence.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Prince</a></li>
+            <li><a href="#experience">Experience &amp; Education</a></li>
+            <li><a href="#skills">Skills (11 Categories)</a></li>
+            <li><a href="#projects">Live Work &amp; Portals</a></li>
+            <li><a href="#github">GitHub Live</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social-col">
+          <h4 class="footer-col-title">Connect &amp; Social</h4>
+          <div class="footer-social-strip">
+            <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-github" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/prince-patel-7209ab322" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-linkedin" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/patelprince__8055/" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-instagram" aria-label="Instagram Profile">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/prince.patel.388565/" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-facebook" aria-label="Facebook Profile">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+          <div class="footer-resume-box">
+            <a href="assets/resume.pdf" download="Prince_Patel_Resume.pdf" class="btn btn-outline-nav btn-sm">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download Official Resume</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> <strong>Prince Patel</strong> (patelprince8055). All rights reserved.
+        </p>
+        <p class="footer-tech-note">
+          Engineered with pure HTML5, CSS3, Vanilla JS &bull; Hosted on Netlify / Vercel / GitHub Pages
+        </p>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top" title="Back to Top">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
