@@ -518,6 +518,8 @@ function initParticleCanvas() {
    8. 3D Mouse Tilt Effect for Profile Frame & Glass Cards
    ---------------------------------------------------------------------------- */
 function init3DTiltEffects() {
+  if (window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 1024) return;
+
   const profileCard = document.getElementById("profile-card-3d");
   if (profileCard) {
     profileCard.addEventListener("mousemove", (e) => {
@@ -527,14 +529,14 @@ function init3DTiltEffects() {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateX = ((y - centerY) / centerY) * -12;
-      const rotateY = ((x - centerX) / centerX) * 12;
+      const rotateX = ((y - centerY) / centerY) * -14;
+      const rotateY = ((x - centerX) / centerX) * 14;
 
-      profileCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      profileCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
     });
 
     profileCard.addEventListener("mouseleave", () => {
-      profileCard.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+      profileCard.style.transform = "";
     });
   }
 
@@ -548,14 +550,14 @@ function init3DTiltEffects() {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateX = ((y - centerY) / centerY) * -6;
-      const rotateY = ((x - centerX) / centerX) * 6;
+      const rotateX = ((y - centerY) / centerY) * -8;
+      const rotateY = ((x - centerX) / centerX) * 8;
 
-      card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.02)`;
     });
 
     card.addEventListener("mouseleave", () => {
-      card.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)";
+      card.style.transform = "";
     });
   });
 }
@@ -564,7 +566,7 @@ function init3DTiltEffects() {
    9. Magnetic Button Hover Effect
    ---------------------------------------------------------------------------- */
 function initMagneticButtons() {
-  if (window.matchMedia("(pointer: coarse)").matches) return;
+  if (window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 1024) return;
 
   const magneticBtns = document.querySelectorAll(".magnetic-btn");
   magneticBtns.forEach((btn) => {
@@ -573,11 +575,11 @@ function initMagneticButtons() {
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
 
-      btn.style.transform = `translate(${x * 0.22}px, ${y * 0.22}px)`;
+      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) translateY(-3px) scale(1.03)`;
     });
 
     btn.addEventListener("mouseleave", () => {
-      btn.style.transform = "translate(0px, 0px)";
+      btn.style.transform = "";
     });
   });
 }
