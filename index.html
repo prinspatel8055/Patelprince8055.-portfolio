@@ -61,9 +61,19 @@
     <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
   </div>
 
-  <!-- Custom Glow Cursor (Desktop Only) -->
-  <div class="custom-cursor-dot" id="cursor-dot" aria-hidden="true"></div>
-  <div class="custom-cursor-outline" id="cursor-outline" aria-hidden="true"></div>
+  <!-- Futuristic Cyber Precision Arrow Cursor (Desktop Only) -->
+  <div class="custom-cursor-arrow" id="cursor-arrow" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+      <path d="M3 3L10.5 21L14 14L21 10.5L3 3Z" fill="url(#cursorGrad)" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/>
+      <defs>
+        <linearGradient id="cursorGrad" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00d4ff"/>
+          <stop offset="1" stop-color="#7c5cff"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <div class="custom-cursor-aura" id="cursor-aura" aria-hidden="true"></div>
 
   <!-- Floating Vertical Social Sidebar (Desktop) -->
   <aside class="floating-social-sidebar" aria-label="Social Profiles Sidebar">
@@ -220,30 +230,30 @@
             Web Developer &amp; IT Specialist at <strong>Ganpat University</strong>. Architecting responsive web applications, high-traffic portals, immersive Framer animations, and secure server environments with <strong>HTML5, CSS3, JavaScript, Node.js &amp; Python</strong>.
           </p>
 
-          <!-- Primary CTA Buttons -->
-          <div class="hero-cta-group">
-            <a href="#projects" class="btn btn-primary magnetic-btn">
+          <!-- Primary CTA Buttons (Converge into place on scroll) -->
+          <div class="hero-cta-group anim-converge-group">
+            <a href="#projects" class="btn btn-primary magnetic-btn converge-left">
               <span>View Live Work</span>
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
                 <polyline points="7 7 17 7 17 17"></polyline>
               </svg>
             </a>
-            <a href="#contact" class="btn btn-secondary magnetic-btn">
+            <a href="#contact" class="btn btn-secondary magnetic-btn converge-top delay-1">
               <span>Contact Me</span>
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
             </a>
-            <button id="hero-view-resume-btn" class="btn btn-glass magnetic-btn" aria-label="Open Resume Viewer Modal">
+            <button id="hero-view-resume-btn" class="btn btn-glass magnetic-btn converge-bottom delay-2" aria-label="Open Resume Viewer Modal">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
               <span>View Resume</span>
             </button>
-            <a href="assets/resume.pdf" download="Prince_Patel_Resume.pdf" class="btn btn-outline magnetic-btn" aria-label="Download Official Resume PDF">
+            <a href="assets/resume.pdf" download="Prince_Patel_Resume.pdf" class="btn btn-outline magnetic-btn converge-right delay-3" aria-label="Download Official Resume PDF">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
@@ -253,26 +263,26 @@
             </a>
           </div>
 
-          <!-- Hero Big Social Icons (56-64px) -->
+          <!-- Hero Big Social Icons (Stagger pop animation) -->
           <div class="hero-social-strip">
             <span class="social-strip-label">Connect with me:</span>
-            <div class="hero-social-icons">
-              <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-github" aria-label="Prince Patel on GitHub" data-tooltip="GitHub (@prinspatel8055)">
+            <div class="hero-social-icons anim-converge-group">
+              <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-github pop-stagger" aria-label="Prince Patel on GitHub" data-tooltip="GitHub (@prinspatel8055)">
                 <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
                   <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/in/prince-patel-7209ab322" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-linkedin" aria-label="Prince Patel on LinkedIn" data-tooltip="LinkedIn (Prince Patel)">
+              <a href="https://www.linkedin.com/in/prince-patel-7209ab322" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-linkedin pop-stagger delay-1" aria-label="Prince Patel on LinkedIn" data-tooltip="LinkedIn (Prince Patel)">
                 <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
               </a>
-              <a href="https://www.instagram.com/patelprince__8055/" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-instagram" aria-label="Prince Patel on Instagram" data-tooltip="Instagram (@patelprince__8055)">
+              <a href="https://www.instagram.com/patelprince__8055/" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-instagram pop-stagger delay-2" aria-label="Prince Patel on Instagram" data-tooltip="Instagram (@patelprince__8055)">
                 <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
               </a>
-              <a href="https://www.facebook.com/prince.patel.388565/" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-facebook" aria-label="Prince Patel on Facebook" data-tooltip="Facebook (Prince Patel)">
+              <a href="https://www.facebook.com/prince.patel.388565/" target="_blank" rel="noopener noreferrer" class="social-icon-btn btn-facebook pop-stagger delay-3" aria-label="Prince Patel on Facebook" data-tooltip="Facebook (Prince Patel)">
                 <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
@@ -302,8 +312,8 @@
               </div>
             </div>
 
-            <!-- Floating Micro Badges -->
-            <div class="floating-badge badge-top-left" aria-hidden="true">
+            <!-- Floating Micro Badges (Assemble on scroll) -->
+            <div class="floating-badge badge-top-left converge-left delay-1" aria-hidden="true">
               <span class="badge-icon">🏛️</span>
               <div class="badge-content">
                 <strong>Ganpat University</strong>
@@ -311,7 +321,7 @@
               </div>
             </div>
 
-            <div class="floating-badge badge-bottom-right" aria-hidden="true">
+            <div class="floating-badge badge-bottom-right converge-right delay-2" aria-hidden="true">
               <span class="badge-icon">⚡</span>
               <div class="badge-content">
                 <strong>9+ Live Portals</strong>
@@ -319,7 +329,7 @@
               </div>
             </div>
 
-            <div class="floating-badge badge-bottom-left" aria-hidden="true">
+            <div class="floating-badge badge-bottom-left converge-bottom delay-3" aria-hidden="true">
               <span class="badge-icon">🛡️</span>
               <div class="badge-content">
                 <strong>Cybersecurity</strong>
@@ -436,24 +446,24 @@
               Beyond frontend craftsmanship, I manage production web hosting and Linux servers utilizing <strong>Webuzo and Hostinger control panels</strong>—handling DNS configurations, automated backups, SSL/TLS, and performance troubleshooting for university portals and international conferences. My passion extends into cybersecurity fundamentals, where I study threat awareness, vulnerability assessment concepts, and Linux environments.
             </p>
 
-            <!-- Animated Counters Grid -->
-            <div class="counter-grid">
-              <div class="counter-card glass-panel">
+            <!-- Animated Counters Grid (4 elements converge & assemble on scroll) -->
+            <div class="counter-grid anim-converge-group">
+              <div class="counter-card glass-panel converge-left">
                 <div class="counter-value" data-target="15">0</div>
                 <div class="counter-suffix">+</div>
                 <div class="counter-label">Projects Delivered</div>
               </div>
-              <div class="counter-card glass-panel">
+              <div class="counter-card glass-panel converge-top delay-1">
                 <div class="counter-value" data-target="9">0</div>
                 <div class="counter-suffix">+</div>
                 <div class="counter-label">Live University &amp; Event Sites</div>
               </div>
-              <div class="counter-card glass-panel">
+              <div class="counter-card glass-panel converge-bottom delay-2">
                 <div class="counter-value" data-target="25">0</div>
                 <div class="counter-suffix">+</div>
                 <div class="counter-label">Tech &amp; Tools Mastered</div>
               </div>
-              <div class="counter-card glass-panel">
+              <div class="counter-card glass-panel converge-right delay-3">
                 <div class="counter-value" data-target="4">0</div>
                 <div class="counter-suffix">+</div>
                 <div class="counter-label">Years of Coding &amp; Learning</div>
@@ -498,7 +508,7 @@
           <div class="timeline-line" aria-hidden="true"></div>
 
           <!-- Item 1: Ganpat University (Present) -->
-          <div class="timeline-item reveal-fade">
+          <div class="timeline-item reveal-slide-left">
             <div class="timeline-dot dot-primary"></div>
             <div class="timeline-card glass-panel tilt-card">
               <div class="timeline-header">
@@ -531,7 +541,7 @@
           </div>
 
           <!-- Item 2: Jhex.Inc -->
-          <div class="timeline-item reveal-fade">
+          <div class="timeline-item reveal-slide-right delay-1">
             <div class="timeline-dot dot-secondary"></div>
             <div class="timeline-card glass-panel tilt-card">
               <div class="timeline-header">
@@ -558,7 +568,7 @@
           </div>
 
           <!-- Item 3: Ganpat University Bachelor Degree -->
-          <div class="timeline-item reveal-fade">
+          <div class="timeline-item reveal-slide-left">
             <div class="timeline-dot dot-accent"></div>
             <div class="timeline-card glass-panel tilt-card">
               <div class="timeline-header">
@@ -583,7 +593,7 @@
           </div>
 
           <!-- Item 4: High School Education -->
-          <div class="timeline-item reveal-fade">
+          <div class="timeline-item reveal-slide-right delay-1">
             <div class="timeline-dot dot-info"></div>
             <div class="timeline-card glass-panel tilt-card">
               <div class="timeline-header">
@@ -602,7 +612,7 @@
           </div>
 
           <!-- Item 5: Competition Achievement -->
-          <div class="timeline-item reveal-fade">
+          <div class="timeline-item reveal-slide-left delay-2">
             <div class="timeline-dot dot-award"></div>
             <div class="timeline-card glass-panel tilt-card highlight-award-card">
               <div class="timeline-header">
@@ -650,10 +660,10 @@
         </div>
 
         <!-- Skills Cards Grid -->
-        <div class="skills-grid" id="skills-grid">
+        <div class="skills-grid anim-converge-group" id="skills-grid">
           
           <!-- 1. Programming & Coding Languages -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="programming">
+          <div class="skill-category-card glass-panel tilt-card converge-left" data-category="programming">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-code">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
@@ -676,7 +686,7 @@
           </div>
 
           <!-- 2. Frontend Web Development -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="frontend">
+          <div class="skill-category-card glass-panel tilt-card converge-top delay-1" data-category="frontend">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-layout">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
@@ -701,7 +711,7 @@
           </div>
 
           <!-- 3. Backend Development -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="backend">
+          <div class="skill-category-card glass-panel tilt-card converge-bottom delay-2" data-category="backend">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-server">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
@@ -727,7 +737,7 @@
           </div>
 
           <!-- 4. Database Management -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="database">
+          <div class="skill-category-card glass-panel tilt-card converge-right delay-3" data-category="database">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-database">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
@@ -751,7 +761,7 @@
           </div>
 
           <!-- 5. UI/UX & Web Designing -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="uiux">
+          <div class="skill-category-card glass-panel tilt-card converge-left" data-category="uiux">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-pen">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
@@ -780,7 +790,7 @@
           </div>
 
           <!-- 6. Cybersecurity (Fundamentals) -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="cybersecurity">
+          <div class="skill-category-card glass-panel tilt-card converge-top delay-1" data-category="cybersecurity">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-shield">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -807,7 +817,7 @@
           </div>
 
           <!-- 7. Networking & Infrastructure -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="networking">
+          <div class="skill-category-card glass-panel tilt-card converge-bottom delay-2" data-category="networking">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-globe">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
@@ -834,7 +844,7 @@
           </div>
 
           <!-- 8. Tools & Technologies -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="tools">
+          <div class="skill-category-card glass-panel tilt-card converge-right delay-3" data-category="tools">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-tool">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
@@ -859,7 +869,7 @@
           </div>
 
           <!-- 9. Web Development & CMS -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="webcms">
+          <div class="skill-category-card glass-panel tilt-card converge-left" data-category="webcms">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-layers">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
@@ -885,7 +895,7 @@
           </div>
 
           <!-- 10. Creative & Advanced Development -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="creative">
+          <div class="skill-category-card glass-panel tilt-card converge-bottom delay-1" data-category="creative">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-sparkle">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -909,7 +919,7 @@
           </div>
 
           <!-- 11. Professional & Practical Skills -->
-          <div class="skill-category-card glass-panel tilt-card" data-category="professional">
+          <div class="skill-category-card glass-panel tilt-card converge-right delay-2" data-category="professional">
             <div class="skill-card-header">
               <div class="skill-card-icon icon-briefcase">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
@@ -1127,9 +1137,9 @@
           <div class="section-divider"></div>
         </div>
 
-        <div class="services-grid">
+        <div class="services-grid anim-converge-group">
           <!-- Service 1: Landing Pages -->
-          <div class="service-card glass-panel tilt-card reveal-fade">
+          <div class="service-card glass-panel tilt-card converge-left">
             <div class="service-icon-box">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
             </div>
@@ -1143,7 +1153,7 @@
           </div>
 
           <!-- Service 2: Website Development -->
-          <div class="service-card glass-panel tilt-card reveal-fade">
+          <div class="service-card glass-panel tilt-card converge-top delay-1">
             <div class="service-icon-box">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
             </div>
@@ -1157,7 +1167,7 @@
           </div>
 
           <!-- Service 3: UI/UX Design -->
-          <div class="service-card glass-panel tilt-card reveal-fade">
+          <div class="service-card glass-panel tilt-card converge-right delay-2">
             <div class="service-icon-box">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
             </div>
@@ -1171,7 +1181,7 @@
           </div>
 
           <!-- Service 4: Backend / REST APIs -->
-          <div class="service-card glass-panel tilt-card reveal-fade">
+          <div class="service-card glass-panel tilt-card converge-left delay-1">
             <div class="service-icon-box">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
             </div>
@@ -1185,7 +1195,7 @@
           </div>
 
           <!-- Service 5: Website Maintenance & Hosting -->
-          <div class="service-card glass-panel tilt-card reveal-fade">
+          <div class="service-card glass-panel tilt-card converge-bottom delay-2">
             <div class="service-icon-box">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </div>
@@ -1199,7 +1209,7 @@
           </div>
 
           <!-- Service 6: Performance & Digital Marketing -->
-          <div class="service-card glass-panel tilt-card reveal-fade">
+          <div class="service-card glass-panel tilt-card converge-right delay-3">
             <div class="service-icon-box">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
@@ -1271,9 +1281,9 @@
             <!-- Extra Large Social Media Channels (72px with Labels) -->
             <div class="contact-socials-group">
               <h4 class="socials-group-title">Official Social Profiles</h4>
-              <div class="contact-social-buttons">
+              <div class="contact-social-buttons anim-converge-group">
                 <!-- GitHub 72px -->
-                <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-github" aria-label="Visit GitHub Profile">
+                <a href="https://github.com/prinspatel8055" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-github converge-left" aria-label="Visit GitHub Profile">
                   <div class="xl-icon-circle">
                     <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
                       <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -1286,7 +1296,7 @@
                 </a>
 
                 <!-- LinkedIn 72px -->
-                <a href="https://www.linkedin.com/in/prince-patel-7209ab322" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-linkedin" aria-label="Visit LinkedIn Profile">
+                <a href="https://www.linkedin.com/in/prince-patel-7209ab322" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-linkedin converge-right delay-1" aria-label="Visit LinkedIn Profile">
                   <div class="xl-icon-circle">
                     <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -1299,7 +1309,7 @@
                 </a>
 
                 <!-- Instagram 72px -->
-                <a href="https://www.instagram.com/patelprince__8055/" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-instagram" aria-label="Visit Instagram Profile">
+                <a href="https://www.instagram.com/patelprince__8055/" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-instagram converge-left delay-2" aria-label="Visit Instagram Profile">
                   <div class="xl-icon-circle">
                     <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -1312,7 +1322,7 @@
                 </a>
 
                 <!-- Facebook 72px -->
-                <a href="https://www.facebook.com/prince.patel.388565/" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-facebook" aria-label="Visit Facebook Profile">
+                <a href="https://www.facebook.com/prince.patel.388565/" target="_blank" rel="noopener noreferrer" class="social-xl-btn btn-facebook converge-right delay-3" aria-label="Visit Facebook Profile">
                   <div class="xl-icon-circle">
                     <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>

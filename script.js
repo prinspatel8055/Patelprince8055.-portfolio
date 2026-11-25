@@ -237,15 +237,15 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initHeroTyping();
   initParticleCanvas();
+  renderProjectsGrid();
+  renderAntigravityProjects();
+  initProjectsFilter();
+  initSkillsFilter();
   init3DTiltEffects();
   initMagneticButtons();
   initButtonRipple();
   initCustomCursor();
   initAnimatedCounters();
-  initSkillsFilter();
-  renderProjectsGrid();
-  initProjectsFilter();
-  renderAntigravityProjects();
   initGitHubSection();
   initResumeModal();
   initContactForm();
@@ -605,32 +605,35 @@ function initButtonRipple() {
    11. Smooth Trailing Custom Cursor (Desktop Only)
    ---------------------------------------------------------------------------- */
 function initCustomCursor() {
-  const dot = document.getElementById("cursor-dot");
-  const outline = document.getElementById("cursor-outline");
-  if (!dot || !outline || window.matchMedia("(pointer: coarse)").matches) return;
+  const arrow = document.getElementById("cursor-arrow");
+  const aura = document.getElementById("cursor-aura");
+  if (!arrow || !aura || window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 1024) return;
 
   let mouseX = -100;
   let mouseY = -100;
-  let outlineX = -100;
-  let outlineY = -100;
+  let auraX = -100;
+  let auraY = -100;
 
   window.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    // Arrow tip follows cursor exactly
+    arrow.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
   });
 
-  // Lerp smoothing animation loop for outline
+  // Lerp smoothing animation loop for soft trailing aura
   function renderCursor() {
-    outlineX += (mouseX - outlineX) * 0.18;
-    outlineY += (mouseY - outlineY) * 0.18;
-    outline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+    auraX += (mouseX - auraX) * 0.16;
+    auraY += (mouseY - auraY) * 0.16;
+    aura.style.transform = `translate3d(${auraX}px, ${auraY}px, 0)`;
     requestAnimationFrame(renderCursor);
   }
   renderCursor();
 
   // Hover state detection on clickable items
-  const clickables = document.querySelectorAll("a, button, input, textarea, .project-card, .skill-chip");
+  const clickables = document.querySelectorAll(
+    "a, button, input, textarea, .project-card, .skill-chip, .tilt-card, .social-icon-btn, .social-xl-btn, .filter-tab-btn, .proj-filter-btn"
+  );
   clickables.forEach((el) => {
     el.addEventListener("mouseenter", () => document.body.classList.add("cursor-hover"));
     el.addEventListener("mouseleave", () => document.body.classList.remove("cursor-hover"));
@@ -700,6 +703,9 @@ function initSkillsFilter() {
           }, 250);
         }
       });
+      setTimeout(() => {
+        if (window.refreshScrollReveal) window.refreshScrollReveal();
+      }, 50);
     });
   });
 }
@@ -712,9 +718,11 @@ function renderProjectsGrid() {
   if (!grid) return;
 
   grid.innerHTML = CONFIG.projects
-    .map((proj) => {
+    .map((proj, idx) => {
+      const animDir = ["converge-left", "converge-bottom", "converge-right"][idx % 3];
+      const delay = `delay-${(idx % 3) + 1}`;
       return `
-        <article class="project-card glass-panel tilt-card" data-category="${proj.category}">
+        <article class="project-card glass-panel tilt-card ${animDir} ${delay}" data-category="${proj.category}">
           <div class="project-thumb-box">
             <span class="project-category-badge">${proj.category}</span>
             <img 
@@ -786,6 +794,9 @@ function initProjectsFilter() {
           }, 250);
         }
       });
+      setTimeout(() => {
+        if (window.refreshScrollReveal) window.refreshScrollReveal();
+      }, 50);
     });
   });
 }
@@ -795,8 +806,11 @@ function renderAntigravityProjects() {
   if (!grid) return;
 
   grid.innerHTML = CONFIG.antigravityProjects
-    .map((item) => `
-      <div class="ag-card glass-panel tilt-card">
+    .map((item, idx) => {
+      const animDir = ["converge-left", "converge-top", "converge-bottom", "converge-right"][idx % 4];
+      const delay = `delay-${(idx % 4) + 1}`;
+      return `
+      <div class="ag-card glass-panel tilt-card ${animDir} ${delay}">
         <div class="ag-card-icon">${item.icon}</div>
         <h4>${item.title}</h4>
         <p>${item.description}</p>
@@ -804,7 +818,8 @@ function renderAntigravityProjects() {
           ${item.tags.map((t) => `<span class="tag-chip">${t}</span>`).join("")}
         </div>
       </div>
-    `)
+    `;
+    })
     .join("");
 }
 
@@ -1077,25 +1092,77 @@ function initContactForm() {
 }
 
 /* ----------------------------------------------------------------------------
-   18. Scroll Reveal Animations (IntersectionObserver)
+   18. Scroll Reveal & Convergence Animation System (IntersectionObserver)
    ---------------------------------------------------------------------------- */
 function initScrollReveal() {
-  const elements = document.querySelectorAll(".reveal-fade, .reveal-slide-left, .reveal-slide-right");
+  const selector = [
+    ".reveal-fade",
+    ".reveal-slide-left",
+    ".reveal-slide-right",
+    ".anim-converge-group",
+    ".section-header",
+    ".project-card",
+    ".skill-category-card",
+    ".timeline-item",
+    ".service-card",
+    ".ag-card",
+    ".gh-stats-card",
+    ".github-profile-card",
+    ".github-chart-card",
+    ".profile-card-3d",
+    ".about-left-card",
+    ".about-right-content",
+    ".contact-info-panel",
+    ".contact-form-panel",
+    ".hero-content"
+  ].join(", ");
+
+  const elements = document.querySelectorAll(selector);
   if (!elements.length) return;
 
+  const isMobile = window.innerWidth < 768;
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-revealed");
+          // Also reveal nested convergence items
+          entry.target.querySelectorAll?.(".converge-left, .converge-right, .converge-top, .converge-bottom, .converge-scale, .pop-stagger").forEach((child) => {
+            child.classList.add("is-revealed");
+          });
           observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    {
+      threshold: isMobile ? 0.04 : 0.1,
+      rootMargin: isMobile ? "0px 0px -20px 0px" : "0px 0px -35px 0px"
+    }
   );
 
-  elements.forEach((el) => observer.observe(el));
+  elements.forEach((el) => {
+    // If element is already in viewport on page load (e.g. Hero), reveal smoothly immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      setTimeout(() => {
+        el.classList.add("is-revealed");
+        el.querySelectorAll?.(".converge-left, .converge-right, .converge-top, .converge-bottom, .converge-scale, .pop-stagger").forEach((child) => {
+          child.classList.add("is-revealed");
+        });
+      }, 60);
+    } else {
+      observer.observe(el);
+    }
+  });
+
+  // Re-observe dynamic cards (such as after filtering)
+  window.refreshScrollReveal = () => {
+    document.querySelectorAll(selector).forEach((el) => {
+      if (!el.classList.contains("is-revealed")) {
+        observer.observe(el);
+      }
+    });
+  };
 }
 
 /* ----------------------------------------------------------------------------

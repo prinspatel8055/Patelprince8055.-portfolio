@@ -366,45 +366,63 @@ textarea:focus-visible {
 }
 
 /* Custom Cursor */
-.custom-cursor-dot,
-.custom-cursor-outline {
+/* --------------------------------------------------------------------------
+   Futuristic Cyber Neon Arrow Cursor (Desktop Only)
+   -------------------------------------------------------------------------- */
+.custom-cursor-arrow {
   pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99999;
+  width: 28px;
+  height: 28px;
+  transform: translate3d(-100px, -100px, 0);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.8)) drop-shadow(0 0 16px rgba(124, 92, 255, 0.5));
+  will-change: transform;
+}
+
+.custom-cursor-arrow svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform-origin: 3px 3px;
+  transform: rotate(-12deg);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.25s ease;
+}
+
+.custom-cursor-aura {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99998;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  z-index: 99990;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease;
+  background: radial-gradient(circle, rgba(124, 92, 255, 0.45) 0%, rgba(0, 212, 255, 0.25) 50%, transparent 75%);
+  transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, opacity 0.25s ease;
+  will-change: transform;
 }
 
-.custom-cursor-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--secondary-cyan);
-  box-shadow: 0 0 10px var(--secondary-cyan);
+/* Hovering on clickable elements (links, buttons, cards) */
+.cursor-hover .custom-cursor-arrow svg {
+  transform: rotate(0deg) scale(1.22);
+  filter: drop-shadow(0 0 14px rgba(255, 92, 168, 0.95)) drop-shadow(0 0 24px rgba(0, 212, 255, 0.8));
 }
 
-.custom-cursor-outline {
-  width: 38px;
-  height: 38px;
-  border: 1.5px solid rgba(124, 92, 255, 0.6);
-  background: rgba(124, 92, 255, 0.05);
-  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+.cursor-hover .custom-cursor-aura {
+  width: 56px;
+  height: 56px;
+  background: radial-gradient(circle, rgba(255, 92, 168, 0.45) 0%, rgba(0, 212, 255, 0.3) 50%, transparent 75%);
 }
 
-/* Hover effect on clickable elements */
-.cursor-hover .custom-cursor-outline {
-  width: 58px;
-  height: 58px;
-  border-color: var(--accent-pink);
-  background: rgba(255, 92, 168, 0.12);
-}
-
-/* Hide on touch devices */
-@media (pointer: coarse) {
-  .custom-cursor-dot,
-  .custom-cursor-outline {
+/* Hide cursor completely on touch and mobile devices */
+@media (pointer: coarse), (max-width: 1024px) {
+  .custom-cursor-arrow,
+  .custom-cursor-aura {
     display: none !important;
   }
 }
@@ -3137,31 +3155,209 @@ textarea:focus-visible {
 }
 
 /* --------------------------------------------------------------------------
-   19. SCROLL REVEAL ANIMATIONS (IntersectionObserver)
+   19. SCROLL REVEAL & CONVERGENCE ANIMATION SYSTEM (Mobile & Desktop 60fps)
    -------------------------------------------------------------------------- */
 .reveal-fade,
 .reveal-slide-left,
 .reveal-slide-right {
   opacity: 0;
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal-fade {
-  transform: translateY(30px);
+  transform: translateY(32px);
 }
 
 .reveal-slide-left {
-  transform: translateX(-40px);
+  transform: translateX(-45px);
 }
 
 .reveal-slide-right {
-  transform: translateX(40px);
+  transform: translateX(45px);
 }
 
-.is-revealed {
+/* Convergence animations (3, 4 elements assemble together on scroll) */
+.converge-left {
+  opacity: 0;
+  transform: translateX(-50px) rotate(-3deg);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.converge-right {
+  opacity: 0;
+  transform: translateX(50px) rotate(3deg);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.converge-top {
+  opacity: 0;
+  transform: translateY(-45px) scale(0.92);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.converge-bottom {
+  opacity: 0;
+  transform: translateY(45px) scale(0.92);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.converge-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: opacity, transform;
+}
+
+/* Staggered Pop Animations for Icons and Badges */
+.pop-stagger {
+  opacity: 0;
+  transform: scale(0.65) translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: opacity, transform;
+}
+
+/* Stagger Delays */
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.3s !important; }
+.delay-4 { transition-delay: 0.4s !important; }
+.delay-5 { transition-delay: 0.5s !important; }
+
+/* Active Revealed States */
+.is-revealed,
+.is-revealed .converge-left,
+.is-revealed .converge-right,
+.is-revealed .converge-top,
+.is-revealed .converge-bottom,
+.is-revealed .converge-scale,
+.is-revealed .pop-stagger,
+.converge-left.is-revealed,
+.converge-right.is-revealed,
+.converge-top.is-revealed,
+.converge-bottom.is-revealed,
+.converge-scale.is-revealed,
+.pop-stagger.is-revealed {
   opacity: 1 !important;
-  transform: translate(0, 0) !important;
+  transform: translate(0, 0) rotate(0deg) scale(1) !important;
+}
+
+/* Section Header Animated Entrance */
+.section-tag {
+  opacity: 0;
+  transform: translateY(-16px) scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-title {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.section-subtitle {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.18s;
+}
+
+.section-divider {
+  width: 0px !important;
+  opacity: 0;
+  transition: width 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.85s ease;
+  transition-delay: 0.25s;
+}
+
+.is-revealed .section-tag,
+.section-header.is-revealed .section-tag {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.is-revealed .section-title,
+.section-header.is-revealed .section-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.is-revealed .section-subtitle,
+.section-header.is-revealed .section-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.is-revealed .section-divider,
+.section-header.is-revealed .section-divider {
+  width: 60px !important;
+  opacity: 1;
+}
+
+/* 3D Entry Animation for Project Cards, Services & Panels */
+.project-card,
+.service-card,
+.skill-category-card,
+.timeline-item,
+.gh-stats-card,
+.ag-card,
+.github-profile-card,
+.github-chart-card,
+.about-left-card,
+.about-right-content,
+.contact-info-panel,
+.contact-form-panel {
+  opacity: 0;
+  transform: translateY(35px) scale(0.96);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  will-change: opacity, transform;
+}
+
+.project-card.is-revealed,
+.service-card.is-revealed,
+.skill-category-card.is-revealed,
+.timeline-item.is-revealed,
+.gh-stats-card.is-revealed,
+.ag-card.is-revealed,
+.github-profile-card.is-revealed,
+.github-chart-card.is-revealed,
+.about-left-card.is-revealed,
+.about-right-content.is-revealed,
+.contact-info-panel.is-revealed,
+.contact-form-panel.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Mobile responsive convergence adjustments (fast, buttery 60fps) */
+@media (max-width: 768px) {
+  .converge-left {
+    transform: translateX(-26px) scale(0.96);
+  }
+  .converge-right {
+    transform: translateX(26px) scale(0.96);
+  }
+  .converge-top {
+    transform: translateY(-24px) scale(0.96);
+  }
+  .converge-bottom {
+    transform: translateY(24px) scale(0.96);
+  }
+}
+
+/* Timeline dot animation on scroll */
+.timeline-item .timeline-dot {
+  transform: scale(0);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: 0.2s;
+}
+
+.timeline-item.is-revealed .timeline-dot {
+  transform: scale(1);
 }
 
 /* --------------------------------------------------------------------------
